@@ -1,0 +1,40 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Pruebas en <AddCategory Debe de cambiar la caja de texto 1`] = `
+<form
+  onSubmit={[Function]}
+>
+  <input
+    onChange={[Function]}
+    placeholder="What do you want to search?"
+    type="text"
+    value=""
+  />
+</form>
+`;
+
+exports[`Pruebas en <AddCategory Debe de mostrarse correctamente 1`] = `
+<form
+  onSubmit={[Function]}
+>
+  <input
+    onChange={[Function]}
+    placeholder="What do you want to search?"
+    type="text"
+    value=""
+  />
+</form>
+`;
+
+exports[`Pruebas en <AddCategory Debe de mostrarse correctamente 2`] = `
+<form
+  onSubmit={[Function]}
+>
+  <input
+    onChange={[Function]}
+    placeholder="What do you want to search?"
+    type="text"
+    value=""
+  />
+</form>
+`;
