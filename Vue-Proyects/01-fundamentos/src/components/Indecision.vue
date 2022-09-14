@@ -1,15 +1,13 @@
 <template>
   <div>
-    <img src="https://via.placeholder.com/250" alt="" />
+    <img v-if="img" :src="img" alt="" />
     <div class="bg-dark"></div>
-
     <div class="indecision-container">
-      <input type="text" placeholder="Hazme una pregunta" />
+      <input type="text" placeholder="Hazme una pregunta" v-model="question"/>
       <p>Recuerda terminar con un signo de interrogación (?)</p>
-
-      <div>
-        <h2>Seré millonario?</h2>
-        <h1>Si, No, .... pensando</h1>
+      <div v-if="isValidQuestion">
+        <h2>{{question}}</h2>
+        <h1>{{asnwer === 'yes' ? 'Si' : 'No'}}</h1>
       </div>
     </div>
   </div>
@@ -18,10 +16,39 @@
 <script>
 export default {
   name: "Indecision",
+  data() {
+    return {
+      question: null,
+      asnwer: null,
+      img: null,
+      isValidQuestion: false
+    };
+  },
+  methods:{
+    async getAnswer(){
+      this.asnwer = 'Pensando...'
+
+     const {answer, image} = await fetch('https://yesno.wtf/api').then( r=> r.json())
+      this.asnwer = answer
+      this.img = image
+    }
+  },
+  watch:{
+    question(value, oldvalue){
+
+      this.isValidQuestion = false 
+      if(!value.includes('?')) return
+
+      this.isValidQuestion = true
+      // Peticion de http 
+      this.getAnswer()
+    }
+  }
+  // question
 };
 </script>
 
-<style >
+<style>
 img,
 .bg-dark {
   height: 100vh;
