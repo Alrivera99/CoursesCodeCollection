@@ -70,7 +70,7 @@ const leerInput = async( message ) => {
     const { desc } = await inquirer.prompt(question);
     return desc;
 }
-
+ 
 const listarLugares = async( lugares = [] ) => {
 
     const choices = lugares.map( (lugar, i) => {
