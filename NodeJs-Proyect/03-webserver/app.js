@@ -1,9 +1,19 @@
-const http = require('http');
+const express = require('express')
+const app = express()
 
-http.createServer( (req, res)=>{
-    res.write('Hola Mundo')    
-    res.end();
+
+// Servir contenido estatico
+app.use( express.static('public'))
+
+app.get('/', function (req, res) {
+  res.send(__dirname + '/public/index.html')
 })
-.listen( 8000 )
+ 
+app.get('/hola-mundo', function(req, res) {
+    res.send('Hola mundo en su respectiva ruta')
+})
 
-console.log('Escuchando el puerto', 8000);
+app.get('*', function(req, res){
+    res.sendFile(__dirname + '/public/404.html')
+})
+app.listen(8080) 
