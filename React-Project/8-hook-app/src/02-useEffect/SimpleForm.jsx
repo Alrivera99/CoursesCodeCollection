@@ -17,7 +17,7 @@ export const SimpleForm = () => {
   };
 
   useEffect( ( ) => {
-    console.log('hola');
+    console.log('useEffect called');
   })
 
   return (
