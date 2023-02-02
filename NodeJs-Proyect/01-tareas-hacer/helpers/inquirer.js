@@ -1,5 +1,5 @@
+require('colors')
 const inquirer = require('inquirer');
-require('colors');
 
 const preguntas = [
     {
@@ -9,7 +9,7 @@ const preguntas = [
         choices: [
             {
                 value: '1',
-                name: '1. Crear tarea'
+                name: `${'1.'.green} Crear tarea`
             },
             {
                 value: '2',
