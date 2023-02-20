@@ -10,4 +10,4 @@
     };
     const name = fullName('Tony', 'Stark', true);
     console.log({ name });
-})(); 
+})();
