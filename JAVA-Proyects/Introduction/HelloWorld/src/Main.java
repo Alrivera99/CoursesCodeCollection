@@ -5,7 +5,7 @@ public class Main {
 
         System.out.println("Alejandro Enrique Rivera Vasquez");
         System.out.println("saludar = " + saludar.toUpperCase());
-        
+
         int numero = 10;
         System.out.println("numero = " + numero);
         boolean valor = true;
@@ -16,5 +16,14 @@ public class Main {
         }
         System.out.println("numero2 = " + numero2);
         var numero3 = "15";
+
+        String nombre;
+        nombre = "Alejandro";
+        if (numero > 10) {
+            nombre = "Enrique";
+        }
+        System.out.println("nombre = " + nombre);
+
+        var edadPersona = 10;
     }
 }
