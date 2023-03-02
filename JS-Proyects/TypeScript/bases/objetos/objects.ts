@@ -11,13 +11,5 @@
         poderes: ["Puede correr muy rapido"]
     }
 
-    // flash = {
-    //     nombre: "Clark Kent",
-    //     edad: 500,
-    //     poderes: ["Puede volar"],
-    //     getName() {
-    //         return this.nombre;
-    //     }
-    // }
-    console.log(flash.getName());
+
 })();
