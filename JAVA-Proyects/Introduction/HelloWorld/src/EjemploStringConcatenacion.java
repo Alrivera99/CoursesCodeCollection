@@ -12,5 +12,9 @@ public class EjemploStringConcatenacion {
         int numeroB = 5;
 
         System.out.println(detalle + " con un total de " + (numeroA + numeroB) + " horas");
+
+        String detalle2 = curso.concat(" con el instructor ").concat(profesor);
+
+        System.out.println("detalle2 = " + detalle2);
     }
 }
