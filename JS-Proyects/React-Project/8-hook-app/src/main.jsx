@@ -7,7 +7,7 @@ import {CounterWithCustomHook} from "./01-useState/CounterWithCustomHook.jsx";
 import {SimpleForm} from "./02-useEffect/SimpleForm.tsx";
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <React.StrictMode>
+  // <React.StrictMode>
     <SimpleForm />
-  </React.StrictMode>
+  // </React.StrictMode>
 )
