@@ -1,6 +1,2 @@
-(() => { 
-    const a:number  = 10;
-
-    console.log(a);
-    
-})();
+const msg: string = "Hello, world!";
+console.log(msg);
