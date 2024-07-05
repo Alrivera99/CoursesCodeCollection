@@ -24,7 +24,7 @@ SET role = 'admin'
 WHERE id = 1;
 
 WITH nums AS (
-    SELECT id, 'prueba' || row_number() over (ORDER BY id) || '@gmail.com' as new_email
+    SELECT id, 'prueba' || (row_number() OVER (ORDER BY id) + 5899) || '@gmail.com' as new_email
     FROM "users"
 )
 UPDATE "users"
