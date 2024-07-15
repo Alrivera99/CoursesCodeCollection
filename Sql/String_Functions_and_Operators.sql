@@ -17,3 +17,22 @@ SELECT overlay('Txxxxas' placing 'hom' from 2 for 4);
 -- 8. Location of specified substring
 SELECT position('om' in 'Thomas') AS position;
 
+SELECT UPPER(name) AS upper_name,
+       length(name) AS name_length,
+       id || '-' || name AS id_name,
+       name FROM users;
+
+SELECT name,
+       substring(name, 1, 5) AS first_three,
+       position(' ' in name) AS space_position
+       FROM users;
+
+SELECT name,
+       substring(name, 1, position(' ' in name) - 1) AS first_name,
+       substring(name, position(' ' in name) + 1) AS last_name
+       FROM users;
+
+UPDATE users SET first_name = substring(name, 1, position(' ' in name) - 1),
+                 last_name = substring(name, position(' ' in name) + 1);
+
+SELECT * FROM users;
