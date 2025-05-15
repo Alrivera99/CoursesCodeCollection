@@ -17,10 +17,11 @@ export const SimpleForm = () => {
             [name]: value
         });
     }
+    //
+    useEffect(() => {
+        console.log(formState);
+    }, [formState]);
 
-    // useEffect(() => {
-    //     console.log('Hey!');
-    // }, [formState]);
 
     return (
         <>

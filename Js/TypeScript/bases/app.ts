@@ -1,2 +1,9 @@
 const msg: string = "Hello, world!";
-console.log(msg);
+
+const hero = {
+  name: "Ironman",
+  age: 35,
+  isAvenger: true,
+};
+console.log(hero);
+ 
